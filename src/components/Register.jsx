@@ -7,14 +7,18 @@ const Register = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    navigate('/home');
+    if(Validate()){
+      navigate('/home');
+    }
   };
     
   function Validate() {
     var email =
-        document.forms.RegForm.EMail.value;
+        document.getElementById("email").value;
     var password =
-        document.forms.RegForm.Password.value;
+        document.getElementById("psw").value;
+    var rePassword = document.getElementById("psw-repeat").value;
+
     var regEmail=/^\w+([.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 
     if (email === "" || !regEmail.test(email)) {
         window.alert("Please enter a valid e-mail address.");
@@ -24,17 +28,18 @@ const Register = () => {
       
     if (password === "") {
         alert("Please enter your password");
-        password.focus();
+        return false;
+    }
+
+    if(rePassword !== password){
+        alert("Passwords do not match");
         return false;
     }
 
     if(password.length <6){
         alert("Password should be atleast 6 character long");
-        password.focus();
         return false;
-
     }
-    this.props.history.push('/home')
     return true;
   }
 

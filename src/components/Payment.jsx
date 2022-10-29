@@ -1,6 +1,13 @@
 import React from 'react'
 import '../styles/payment.css'
+import {useNavigate} from "react-router-dom";
+
 const Payment = () => {
+    const navigate = useNavigate();
+    const goBack = e =>{
+        e.preventDefault();
+        navigate("/flightreq");
+    }
   return (
     <>
     <h2>Payment Form</h2>
@@ -83,7 +90,7 @@ const Payment = () => {
                     <button type="submit">PAY NOW</button>
                 </div>
 		    <div class="input-box">
-                    <button type="submit" name={"CANCEL BOOKING"}>CANCEL</button>
+                    <button onClick={goBack} type="submit" name={"CANCEL BOOKING"}>CANCEL</button>
                 </div>
             </div>
         </form>

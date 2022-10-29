@@ -13,7 +13,7 @@ const FlightRequest = () => {
     const [adult, setAdult] = useState("");
     const [submit, setSubmit] = useState(false);
 
-    const [flights,setFlights] = useState("");
+    const [flights,setFlights] = useState();
     const [bookFlight, setBookFlight] = useState("");
     
     const options = {
@@ -50,9 +50,10 @@ const FlightRequest = () => {
     
     return (
         <>
-            <h1>Search Flights</h1>
-            {   !flights && ( 
+            {   
+                !flights && ( 
                 <>
+                <h1>Search Flights</h1>
                 <form>
                 <div class="elem-group">
                     <label for="name">Name</label>
@@ -79,30 +80,42 @@ const FlightRequest = () => {
             )}
             {
                 flights && (
+                    <>
+                    <h1>Available Flights</h1>
                     <div>
-                        <h3>Available Flights</h3>
-                        {flights.map((flight, index) => {
-                            return (
-                                <>
-                                <div>
-                                    <h1>Departure Airport: {flights.departureAirport.label}</h1>
-                                    <h1>Arrival Airport: {flights.arrivalAirport.label}</h1>
-                                </div>
-                                <div>
-                                    <h1>
-                                        Price : {flight.total.total}
-                                    </h1>
-                                    <h1>
-                                        Duration : {flight.duration.text}
-                                    </h1>
-                                </div>
-                                </>
-                            )
-                        })}
-                        <button onClick={bookFlights}>
-                            Book
-                        </button>
+                    {flights.map((flight, index) => {
+                        return (
+                            <>
+                            <table border="1">
+                                <tr>
+                                    <th>Flight Name</th>
+                                    <th>Flight Number</th>
+                                    <th>From Source</th>
+                                    <th>To Destination</th>
+                                    <th>Fare(USD)</th>
+                                    <th>Duration</th>
+                                    <th>Booking</th>
+                                </tr>
+                                <tr>
+                                    <td> {flights.flight_name} </td>
+                                    <td>{flights.flight_code}</td>
+                                    <td>{flights.departureAirport.label}</td>
+                                    <td>{flights.arrivalAirport.label}</td>
+                                    <td>{flight.duration.text}</td>
+                                    <td>{flight.total.total} </td>
+                                    <td>
+                                        <button onClick={bookFlights}>
+                                            Book
+                                        </button>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                            </>
+                        )
+                    })}
                     </div>
+                    </>
                 )
             }
         </>

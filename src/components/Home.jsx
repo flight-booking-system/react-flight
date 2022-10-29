@@ -16,29 +16,35 @@ const Home = () => {
                 <li>Search Flight</li>
             </Link>
             <Link
-                to="/"
+                to="/mybookings"
                 onClick={() => {}}
                 className="links"
               >
                 <li>My Bookings</li>
             </Link>
             <Link
-                to="/"
+                to="/about"
                 onClick={() => {}}
                 className="links"
               >
                 <li>About</li>
             </Link>
             <Link
-                to="/"
+                to="/contactus"
                 onClick={() => {}}
                 className="links"
               >
                 <li>Contact Us</li>
             </Link>
+            <Link
+                to="/register"
+                onClick={() => {}}
+                className="links"
+              >
+                <li style={{float:"right"}}>Register/Login</li>
+            </Link>
             </ul>
         </nav>
-        <h2>The Sky is Waiting for You </h2>
     </>
   )
 }

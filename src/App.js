@@ -3,6 +3,7 @@ import Home from "./components/Home.jsx";
 import Register from "./components/Register.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
+import Payment from "./components/Payment.jsx";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
 
               {/* FlightReq */}
               <Route path='/flightreq' element={<FlightRequest/>}/>
+              <Route path='/payments' element={<Payment/>}/>
 
             </Routes>
           </div>

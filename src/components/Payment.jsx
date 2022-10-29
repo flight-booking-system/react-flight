@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../styles/payment.css'
 const Payment = () => {
   return (
     <>
@@ -83,7 +83,7 @@ const Payment = () => {
                     <button type="submit">PAY NOW</button>
                 </div>
 		    <div class="input-box">
-                    <button onClick={cancel()} type="submit" name={"CANCEL BOOKING"}>CANCEL</button>
+                    <button type="submit" name={"CANCEL BOOKING"}>CANCEL</button>
                 </div>
             </div>
         </form>

@@ -7,9 +7,7 @@ const Register = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // if(Validate()){
-        navigate('/home');
-    // }
+    navigate('/home');
   };
     
   function Validate() {

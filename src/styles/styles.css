@@ -4,7 +4,7 @@
     height: 45px;
     border-radius: 10px;
     position: absolute;
-    top: 0;
+    top: 12%;
     left: 20px;
     width: 97%;
     overflow-x: hidden !important;
@@ -93,3 +93,8 @@ div.elem-group {
   button:hover {
 	border: 2px solid black;
   }
+  body{
+	background-image: url(BackGround.jpg);
+	background-size: cover;
+	background-position: center;
+}

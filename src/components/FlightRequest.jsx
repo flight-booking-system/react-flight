@@ -14,7 +14,7 @@ const FlightRequest = () => {
     const [submit, setSubmit] = useState(false);
 
     const [flights,setFlights] = useState("");
-    const [bookFlight,setBookFlight] = useState("");
+    const [bookFlight, setBookFlight] = useState("");
     
     const options = {
         method: 'GET',
@@ -27,9 +27,9 @@ const FlightRequest = () => {
             type: 'economy',
             currency: 'USD'
         },
-        headers: {
-        'X-RapidAPI-Key': '1b85cf5c2dmshb1a1bebd8c1b3bap1ee271jsn842fa614bef4',
-        'X-RapidAPI-Host': 'flight-fare-search.p.rapidapi.com'
+        headers: { 
+        'X-RapidAPI-Key': '60573fc678msh81f6d147dcd646cp110ebbjsn79d37a3c3d52', 
+        'X-RapidAPI-Host': 'flight-fare-search.p.rapidapi.com' 
         }
     };
 
@@ -45,7 +45,7 @@ const FlightRequest = () => {
 
     const bookFlights = event => {
         event.preventDefault();
-        navigate('/home');
+        navigate('/payments');
     }
     
     return (
@@ -83,7 +83,20 @@ const FlightRequest = () => {
                         <h3>Available Flights</h3>
                         {flights.map((flight, index) => {
                             return (
-                                console.log(flight)
+                                <>
+                                <div>
+                                    <h1>Departure Airport: {flights.departureAirport.label}</h1>
+                                    <h1>Arrival Airport: {flights.arrivalAirport.label}</h1>
+                                </div>
+                                <div>
+                                    <h1>
+                                        Price : {flight.total.total}
+                                    </h1>
+                                    <h1>
+                                        Duration : {flight.duration.text}
+                                    </h1>
+                                </div>
+                                </>
                             )
                         })}
                         <button onClick={bookFlights}>

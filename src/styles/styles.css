@@ -1,0 +1,95 @@
+#menu {
+	background: #0099CC;
+    color: #FFF;
+    height: 45px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 97%;
+    overflow-x: hidden !important;
+}
+#menu ul, #menu .links {
+	margin: 0 auto;
+	padding: "5px";
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu .links {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu .links a:hover {
+	color: #0099CC;
+	background: #F2F2F2;
+}
+h1{
+	text-align: center;
+	color: Red;
+	font-size: 50px;
+	text-shadow: 2px 2px black;
+}
+div.elem-group {
+	margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+	width: 49%;
+	display: inline-block;
+	margin-left: 1%;
+  }
+  
+  label {
+	display: block;
+	font-family: 'Nanum Gothic';
+	padding-bottom: 10px;
+	font-size: 1.25em;
+  }
+  
+  input, select, textarea {
+	border-radius: 2px;
+	border: 2px solid #777;
+	box-sizing: border-box;
+	font-size: 1.25em;
+	font-family: 'Nanum Gothic';
+	width: 100%;
+	padding: 10px;
+  }
+  
+  div.elem-group.inlined input {
+	width: 95%;
+	display: inline-block;
+  }
+  
+  textarea {
+	height: 250px;
+  }
+  
+  hr {
+	border: 1px dotted #ccc;
+  }
+  
+  button {
+	height: 50px;
+	background: orange;
+	border: none;
+	color: white;
+	font-size: 1.25em;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	border: 2px solid black;
+  }

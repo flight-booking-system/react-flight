@@ -98,3 +98,14 @@ div.elem-group {
 	background-size: cover;
 	background-position: center;
 }
+
+.about-page-container{
+	background-color: rgba(0, 0, 0, 0.281);
+	position: relative;
+    top: 15px;
+}
+.about-page{
+	padding: 8em;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+}

@@ -88,6 +88,7 @@ const FlightRequest = () => {
                             <>
                             <table border="1">
                                 <tr>
+                                    <th>Sn No.</th>
                                     <th>Flight Name</th>
                                     <th>Flight Number</th>
                                     <th>From Source</th>
@@ -97,6 +98,7 @@ const FlightRequest = () => {
                                     <th>Booking</th>
                                 </tr>
                                 <tr>
+                                    <td> {index+1} </td>
                                     <td> {flights.flight_name} </td>
                                     <td>{flights.flight_code}</td>
                                     <td>{flights.departureAirport.label}</td>
